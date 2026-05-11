@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="descriptioion"
+    content="Portfolio website for Rose, showcasing profile, skills, projects, and contact information." />
+
+  <title>Rose portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about {
+      width: 100%;
+      min-width: 100%;
+      display: column;
+      align-items: center;
+      padding: 30px;
+
+    }
+
+    li {
+      padding: 0.5rem;
+    }
+
+    header ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      background: linear-gradient(180deg, grey, rgb(138, 83, 83));
+
+    }
+
+    .follow a {
+      text-decoration: none;
+      color: #000;
+      padding: 0.55rem 0.9rem;
+      font-size: 16px;
+      font-weight: 600;
+      border: radius 9px;
+      list-style: none;
+      display: grid;
+    }
+
+    .link a {
+      display: flex;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 9px;
+      padding: 0.9rem 0.9rem;
+      color: #000;
+
+    }
+
+    .follow-link {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" style="gap: 2.5rem;">
+      <a href="#" class="logo"><span>Rose</span> portfolio </a>
+
+      <ul class="nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <a href="#" class="contact">Contact Me</a>
+      <button
+        style="background: brown;color: #000;border: none;padding: 0.5rem 1rem;border-radius: 40px;cursor: pointer;">
+        <a href="sign.html" style="color: #000;text-decoration: none; margin-left:1rem;">sign up</a>
+      </button>
+    </nav>
+  </header>
+
+  <!-- main content -->
+  <main>
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero.copy">
+          <h2>Hi &#128075;,</h2>
+          <h3 id="hero-title">
+            I am <span></span>Rose<br />
+            A Front-end Developer
+          </h3>
+
+          <p>I am passionate in creating clean and responsive website</p>
+          <div class="cta-group" class="btn.box">
+            <button><a href="#projects">View Projects</a></button>
+            <button><a href="#contact">Contact Me</a></button>
+          </div>
+        </div>
+
+        <div class="hero-img">
+          <img src="myphoto.jpg " alt="my profile picture" />
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="about">
+      <h1>About me</h1>
+      <div class="about-container">
+        <div style="margin: 0; padding: 0; align-content: center;">
+          <img src="mephoto.jpg" alt="my about photo" style="width: 50%;height: 80%;border-radius: 50% 30% 10%;">
+        </div>
+
+        <div>
+          <p style="text-align: center;letter-spacing: 2px;">
+            My name is Rosemary Mwangi.<br />
+            I am motivated front-end developer passionate about builbing clean and
+            user friendly responsive website.<br />
+            My goal is to become a professional web developer and build real-word
+            projects
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="skill-projects">
+      <!-- skills -->
+      <section class="skills">
+        <h1>Skills</h1>
+        <p>This are the skills i have</p>
+        <ul class="skill-list">
+          <li>HTML(Structure of web page)</li>
+          <li>Building forms and tables</li>
+          <li>Creating Responsive Web Pages</li>
+          <li>css3</li>
+        </ul>
+      </section>
+
+      <!-- projects -->
+
+      <section class="projects">
+        <h1>Projects</h1>
+        <article>
+          <h2>Personal portfolio website</h2>
+          <p>i have created my own portfolio</p>
+        </article>
+
+        <article>
+          <h2>Personal portfolio website</h2>
+          <p>i have created my own portfolio</p>
+        </article>
+      </section>
+
+    </div>
+    <!-- contact -->
+    <section class="contact">
+      <h3>Personal Info</h3>
+      <p>Feel free to contact me any time.<br /></p>
+      <div class="sidecontact">
+
+        <div class="info">
+          <p>roshnne6092@gmail.com</p>
+          <p>0116855945</p>
+        </div>
+
+
+        <div>
+          <h1>Contact me</h1>
+
+          <form class="contact-form">
+            <div class="name">
+              <label for="name">Name:</label><br>
+              <input type="text" name="name" id="name" required placeholder="Full name" autocomplete="full name" /><br /><br />
+            </div>
+            <div class="email">
+              <label for="email">Email:</label><br>
+              <input type="email" name="email" id="email" required placeholder="Put email" autocomplete="off" /><br /><br />
+            </div>
+            <div class="messange">
+              <label for="massange">Messange:</label><br>
+              <textarea name="messange" id="messange" required placeholder="How may i help you?"></textarea><br />
+            </div>
+
+            <button type="submit" class="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="follow-link">
+      <div class="follow">
+        <h2>Follow Me;</h2>
+        <ul>
+          <li>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </li>
+        </ul>
+      </div>
+      <div class="link">
+        <h2>Quick Links</h2>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <p style="text-align: center;">&copy; 2026 Rosemary Mwangi. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

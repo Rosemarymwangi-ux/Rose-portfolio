@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login and sign up</title>
+    
+
+    <style>
+        * {
+            margin: 0;                       
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(161, 79, 79);
+        }
+
+        .wrapper {
+            width: 750px;
+            height: 450px;
+            background: transparent;
+            border: 2px solid brown;
+            overflow: hidden;
+            box-shadow: 0 0 25px lightcoral;
+           
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .login, .signup {
+             display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box-login,
+        .info-text-login {
+            justify-content: center;
+            align-content: center;
+            margin: 2rem;
+            /* display: none; */
+        }
+
+       .wrapper .form-box-register{
+            right:0 ;
+            padding: 0 40px 0 60px;
+        }
+
+        
+
+        .form-box-login,.form-box-register h2 {
+            font-size: 32px;
+            text-align: center;
+            color: beige;
+            margin-bottom: 4rem;
+        }
+
+        .input-box {
+            width: 100%;
+            justify-content: center;
+            position: relative;
+            margin: 25px 0 ;
+        }
+
+        .input-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            color: rgb(16, 15, 15);
+            font-size: 16px;
+            font-weight: 500;
+            transition: 3s;
+            padding-top:15px ;
+            padding-right:23px ;
+        }
+
+        .input-box input:focus,
+        .input-box input:valid {
+            border-bottom-color: brown;
+        }
+
+        .input-box label {
+            position: absolute;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: beige;
+            pointer-events: none;
+            transition: 3s;
+
+        }
+        .input-box input:focus~label,
+        .input-box input:valid~label{
+            top: -10px;
+            color: brown;
+        } 
+
+        .btn {
+            position: relative;
+            margin-top: 2rem;
+            width: 100%;
+            height: 45px;
+            background: transparent;
+            border: 2px solid brown;
+            outline: none;
+            cursor: pointer;
+            border-radius: 40px;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 300%;
+            background: linear-gradient(rgb(185, 136, 136), brown, rgb(185, 136, 136));
+            z-index: -1;
+            transition: .3s;
+        }
+
+        .btn:hover::before {
+            top: 0;
+        }
+
+        .logreg-link {
+            text-align: center;
+            margin: 40px 10px;
+            font-size: 16px;
+            margin: 20px 0 10px ;
+            color: white;
+        }
+
+        .logreg-link p,a {
+            font-size: 14px;
+            
+            margin-bottom: 10px;
+            font-size: 600;
+            text-decoration: none;
+            color: lightcoral;
+        }
+
+    
+
+        .logreg-link a :hover {
+            text-decoration: underline;
+        }
+
+         .wrapper .info-text {
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper .info-text-login {
+            right: 0;
+            text-align: right;
+            padding: 0 40px 60px 15px;
+
+        } 
+
+        .info-text-login h1 {
+            font-size: 36px;
+            color: white;
+            line-height: 1.3;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .info-text-login p {
+            font-size: 20px;
+            color: whitesmoke;
+        }
+
+        .wrapper.bg-animate {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 850px;
+            height: 600px;
+            background: linear-gradient(lightcoral, rgb(161, 79, 79));
+            transform: rotate(10deg) skewY(40deg);
+            transform-origin: bottom right;
+            border-bottom: 3px solid brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="login" id="login">
+        <div class="form-box-login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <label for="username">Username </label>
+                    <input type="username" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+
+                <div class="logreg-link">
+                    <p>Don't have an account?</p>
+                    <a href="#signup" class="register-link">sign up</a>
+                </div>
+            </form>
+        </div>
+        <div class="info-text-login">
+            <h1>Welcome To My Page</h1>
+            <p>Login to get best services you would wish for</p>
+        </div>
+        </div>
+
+        <div class="signup" id="signup">
+        <div class="form-box-register">
+            <h2>Sign up</h2>
+            <form action="#">
+                <div class="input-box">
+                    <label for="username">Username </label>
+                    <input type="username" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" required>
+                </div>
+
+                <button type="submit" class="btn">Sign up</button>
+
+                <div class="logreg-link">
+                    <p>Already have an account?</p>
+                    <a href="#login" class="login-link">Login</a>
+                </div>
+            </form>
+        </div>
+        <div class="info-text-register">
+            <h1>Welcome back!</h1>
+            <p>Register to get best services you would wish for</p>
+        </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html
