@@ -1,225 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="descriptioion"
-    content="Portfolio website for Rose, showcasing profile, skills, projects, and contact information." />
-
-  <title>Rose portfolio</title>
+  <meta name="description" content="Portfolio website for Rose, showcasing profile, skills, projects, and contact information." />
+  <title>Rose Portfolio | Front-end Developer</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .about {
-      width: 100%;
-      min-width: 100%;
-      display: column;
-      align-items: center;
-      padding: 30px;
-
-    }
-
-    li {
-      padding: 0.5rem;
-    }
-
-    header ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      background: linear-gradient(180deg, grey, rgb(138, 83, 83));
-
-    }
-
-    .follow a {
-      text-decoration: none;
-      color: #000;
-      padding: 0.55rem 0.9rem;
-      font-size: 16px;
-      font-weight: 600;
-      border: radius 9px;
-      list-style: none;
-      display: grid;
-    }
-
-    .link a {
-      display: flex;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      border-radius: 9px;
-      padding: 0.9rem 0.9rem;
-      color: #000;
-
-    }
-
-    .follow-link {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <nav class="container" style="gap: 2.5rem;">
-      <a href="#" class="logo"><span>Rose</span> portfolio </a>
-
-      <ul class="nav">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-      <a href="#" class="contact">Contact Me</a>
-      <button
-        style="background: brown;color: #000;border: none;padding: 0.5rem 1rem;border-radius: 40px;cursor: pointer;">
-        <a href="sign.html" style="color: #000;text-decoration: none; margin-left:1rem;">sign up</a>
-      </button>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">Rose <span>Portfolio</span></a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#contact" class="button button-secondary">Contact Me</a>
+        <a href="sign.html" class="button button-primary">Sign Up</a>
+      </div>
+    </div>
   </header>
 
-  <!-- main content -->
   <main>
-    <!-- hero section -->
     <section class="hero" id="hero">
-      <div class="hero-content">
-        <div class="hero.copy">
-          <h2>Hi &#128075;,</h2>
-          <h3 id="hero-title">
-            I am <span></span>Rose<br />
-            A Front-end Developer
-          </h3>
-
-          <p>I am passionate in creating clean and responsive website</p>
-          <div class="cta-group" class="btn.box">
-            <button><a href="#projects">View Projects</a></button>
-            <button><a href="#contact">Contact Me</a></button>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Hello, I’m Rose</p>
+          <h1 id="hero-title">Front-end developer building clean, responsive digital experiences.</h1>
+          <p class="hero-text">I create polished websites with modern layouts, thoughtful interactions, and mobile-first responsiveness. My focus is on delivering easy-to-use pages that look great on every device.</p>
+          <div class="cta-group">
+            <a href="#projects" class="button button-primary">View Projects</a>
+            <a href="#contact" class="button button-secondary">Contact Me</a>
           </div>
         </div>
-
-        <div class="hero-img">
-          <img src="myphoto.jpg " alt="my profile picture" />
+        <div class="hero-visual">
+          <img src="myphoto.jpg" alt="Rose profile photo" />
         </div>
       </div>
     </section>
 
-    <!-- about -->
     <section class="about" id="about">
-      <h1>About me</h1>
-      <div class="about-container">
-        <div style="margin: 0; padding: 0; align-content: center;">
-          <img src="mephoto.jpg" alt="my about photo" style="width: 50%;height: 80%;border-radius: 50% 30% 10%;">
+      <div class="container about-container">
+        <div class="about-image">
+          <img src="mephoto.jpg" alt="Rose smiling and working on a laptop">
         </div>
-
-        <div>
-          <p style="text-align: center;letter-spacing: 2px;">
-            My name is Rosemary Mwangi.<br />
-            I am motivated front-end developer passionate about builbing clean and
-            user friendly responsive website.<br />
-            My goal is to become a professional web developer and build real-word
-            projects
-          </p>
+        <div class="about-copy">
+          <h2>About Me</h2>
+          <p>I’m Rosemary Mwangi, a motivated front-end developer passionate about building clean, user-friendly responsive websites. I enjoy turning ideas into attractive layouts that work smoothly on desktop and mobile.</p>
+          <ul class="about-list">
+            <li>Responsive and accessible website design</li>
+            <li>HTML5, CSS3, and JavaScript expertise</li>
+            <li>Modern layouts with a polished visual style</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <div class="skill-projects">
-      <!-- skills -->
-      <section class="skills" id="skills">
-        <h1>Skills</h1>
-        <p>This are the skills i have</p>
-        <ul class="skill-list">
-          <li>HTML(Structure of web page)</li>
-          <li>Building forms and tables</li>
-          <li>Creating Responsive Web Pages</li>
-          <li>css3</li>
-        </ul>
-      </section>
+    <section class="skill-projects">
+      <div class="container skill-projects-grid">
+        <div class="skills" id="skills">
+          <h2>Skills</h2>
+          <p class="section-description">A snapshot of the tools and techniques I use to create responsive websites.</p>
+          <ul class="skill-list">
+            <li>HTML5 semantic structure</li>
+            <li>CSS3 layouts and responsive styling</li>
+            <li>JavaScript interactions</li>
+            <li>Form design and accessibility</li>
+          </ul>
+        </div>
+        <div class="projects" id="projects">
+          <h2>Projects</h2>
+          <p class="section-description">Featured work demonstrating responsive design and front-end craftsmanship.</p>
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>Portfolio Website</h3>
+              <p>Personal portfolio showcasing design, responsive layout, and project presentation.</p>
+            </article>
+            <article class="project-card">
+              <h3>Responsive Landing Page</h3>
+              <p>Landing page built with clean styling and a mobile-first layout.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- projects -->
-
-      <section class="projects" id="projects">
-        <h1>Projects</h1>
-        <article>
-          <h2>Personal portfolio website</h2>
-          <p>i have created my own portfolio</p>
-        </article>
-
-        <article>
-          <h2>Personal portfolio website</h2>
-          <p>i have created my own portfolio</p>
-        </article>
-      </section>
-
-    </div>
-    <!-- contact -->
     <section class="contact" id="contact">
-      <h3>Personal Info</h3>
-      <p>Feel free to contact me any time.<br /></p>
-      <div class="sidecontact">
-
-        <div class="info">
-          <p>roshnne6092@gmail.com</p>
-          <p>0116855945</p>
+      <div class="container contact-container">
+        <div class="contact-info">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Contact Me</h2>
+          <p>Feel free to reach out for project inquiries, collaborations, or to say hello.</p>
+          <div class="contact-details">
+            <p><strong>Email</strong><br><a href="mailto:roshnne6092@gmail.com">roshnne6092@gmail.com</a></p>
+            <p><strong>Phone</strong><br><a href="tel:0116855945">0116855945</a></p>
+          </div>
         </div>
-
-
-        <div>
-          <h1>Contact me</h1>
-
-          <form class="contact-form">
-            <div class="name">
-              <label for="name">Name:</label><br>
-              <input type="text" name="name" id="name" required placeholder="Full name" autocomplete="full name" /><br /><br />
-            </div>
-            <div class="email">
-              <label for="email">Email:</label><br>
-              <input type="email" name="email" id="email" required placeholder="Put email" autocomplete="off" /><br /><br />
-            </div>
-            <div class="messange">
-              <label for="massange">Messange:</label><br>
-              <textarea name="messange" id="messange" required placeholder="How may i help you?"></textarea><br />
-            </div>
-
-            <button type="submit" class="submit">Submit</button>
-          </form>
-        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" required placeholder="How can I help you?" rows="5"></textarea>
+          </div>
+          <button type="submit" class="button button-primary">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="follow-link">
-      <div class="follow">
-        <h2>Follow Me;</h2>
-        <ul>
-          <li>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </li>
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          </li>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <h3>Follow Me</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
         </ul>
       </div>
-      <div class="link">
-        <h2>Quick Links</h2>
-        <nav>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <nav class="footer-nav">
           <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
@@ -228,8 +144,9 @@
         </nav>
       </div>
     </div>
-    <p style="text-align: center;">&copy; 2026 Rosemary Mwangi. All rights reserved.</p>
+    <p class="footer-note">&copy; 2026 Rosemary Mwangi. All rights reserved.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 
