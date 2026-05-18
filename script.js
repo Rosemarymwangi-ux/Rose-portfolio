@@ -53,3 +53,28 @@ if (contactForm) {
   });
 }
 
+const navToggle = document.querySelector('.nav-toggle');
+const mobileNav = document.querySelector('#mobileNav');
+
+if (navToggle && mobileNav) {
+  const navLinks = mobileNav.querySelectorAll('a');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    mobileNav.setAttribute('aria-hidden', String(!isOpen));
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    navToggle.classList.toggle('open', isOpen);
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation menu');
+      navToggle.classList.remove('open');
+    });
+  });
+}
+
